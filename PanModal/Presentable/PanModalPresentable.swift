@@ -172,6 +172,12 @@ public protocol PanModalPresentable: AnyObject {
      Default value is true.
      */
     var showDragIndicator: Bool { get }
+    
+    // 是否可以拖动, 可以向下轻扫关闭
+    var canDrag: Bool { get }
+    
+    // 是否可以拖动，什么手势也不要 false， 默认是true
+    var noNeedGes: Bool { get }
 
     /**
      Asks the delegate if the pan modal should respond to the pan modal gesture recognizer.
@@ -233,5 +239,6 @@ public protocol PanModalPresentable: AnyObject {
      Default value is an empty implementation.
      */
     func panModalDidDismiss()
+
 }
 #endif
